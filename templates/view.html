@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/my.css')}}">
+    <title>Something</title>
+</head>
+<body>
+{% for el in a%}
+<div class="container p-2 text-dark rounded bg-danger">
+    <h4 class="text-center">{{ el.zag }}</h4>
+    <p2 class="m-1">{{ el.tex }}</p2>
+    <input type="submit" class="btn btn-info center mx-auto d-block m-3" value="Создать сервер">
+
+</div>
+{% endfor%}
+</body>
+</html>
