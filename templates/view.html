@@ -1,19 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/my.css')}}">
     <title>Something</title>
 </head>
+<header>
+
+<nav class="navbar fixed-top navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="view">Новости</a>
+    <a class="navbar-brand" href="write">Добавить Новости</a>
+  </div>
+</nav>
+</header>
+
 <body>
 {% for el in a%}
-<div class="container p-2 text-dark rounded bg-danger">
+<div class="container p-2 mt-5 text-dark rounded bg-danger">
     <h4 class="text-center">{{ el.zag }}</h4>
-    <p2 class="m-1">{{ el.tex }}</p2>
-    <input type="submit" class="btn btn-info center mx-auto d-block m-3" value="Создать сервер">
+    <img src="static/img/tor.jpg" width="200" height="200">
+    <p2 class="m-5">{{ el.tex }}</p2><br>
+    <p2 class="">Тема</p2><br>
+    <p2 class="">Дата</p2>
+
+    <input type="submit" class="btn btn-info mx-auto d-block m-3" value="Создать сервер">
 
 </div>
 {% endfor%}
+<script src="{{ url_for('static', filename='js/bootstrap.js') }}" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 </body>
+
 </html>
